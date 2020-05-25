@@ -15,10 +15,10 @@ class CreatePlatsTable extends Migration
     {
         Schema::create('plats', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->bigInteger('id_user')->unsigned();
-            $table->foreign('id_user')
-                ->on('users')
+            $table->string('plat');
+            $table->bigInteger('saveur_id')->unsigned();
+            $table->foreign('saveur_id')
+                ->on('saveurs')
                 ->references('id')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

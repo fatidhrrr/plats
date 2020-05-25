@@ -15,7 +15,7 @@ class CreateSaveursTable extends Migration
     {
         Schema::create('saveurs', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('saveur');
             $table->timestamps();
         });
     }

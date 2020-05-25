@@ -23,15 +23,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($livres as $item)
+                    @foreach ($plats as $item)
                     <tr>
                         <td>{{$item->id}}</td>
                         <td>{{$item->plat}}</td>
-                        <td>{{$item->saveur}}</td>
+                        <td>{{$item->saveur->saveur}}</td>
                     <td>
-                        <a href='{{route('edit', $item->id)}}' class='btn btn-warning'>Edit</a>
                         <a href='{{route('delete', $item->id)}}' class='btn btn-danger'>Delete</a>
-                        <a href='{{route('show', $item->id)}}' class='btn btn-danger'>Show</a>
                     </td>
                     </tr>
                     @endforeach

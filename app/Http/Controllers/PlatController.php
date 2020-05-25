@@ -51,8 +51,7 @@ class PlatController extends Controller
      */
     public function show($id)
     {
-        $plats=Plat::find($id);
-        return view("show", compact('plats'));
+        //
     }
 
     /**
@@ -90,6 +89,8 @@ class PlatController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $plats = Plat::find($id);
+        $plats->delete();
+        return redirect()->route('plat');
     }
 }

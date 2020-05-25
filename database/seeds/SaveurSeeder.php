@@ -13,7 +13,9 @@ class SaveurSeeder extends Seeder
     {
         DB::table('saveurs')->insert([
             'saveur' => 'Sucré',
-            'saveur' => 'Salé',
+        ]);
+        DB::table('saveurs')->insert([
+            'saveur' => 'Salé', 
         ]);
     }
 }

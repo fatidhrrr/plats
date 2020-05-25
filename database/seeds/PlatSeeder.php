@@ -13,10 +13,23 @@ class PlatSeeder extends Seeder
     {
         DB::table('plats')->insert([
             'plat' => 'Riz',
+            'saveur_id' => 2,
+        ]);
+        DB::table('plats')->insert([
             'plat' => 'Couscous',
-            'plat' => 'Tajine',
-            'plat' => 'Crêpe',
+            'saveur_id' => 2,
+        ]);
+        DB::table('plats')->insert([
+            'plat' => 'Tiramisu',
+            'saveur_id' => 1,
+        ]);
+        DB::table('plats')->insert([
             'plat' => 'Gratin',
+            'saveur_id' => 2,
+        ]);
+        DB::table('plats')->insert([
+            'plat' => 'Crêpe',
+            'saveur_id' => 1,
         ]);
     }
 }
