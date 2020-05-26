@@ -18,7 +18,7 @@
             <a class="nav-link text-white" href="{{route('show', 1)}}">Sucré</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="">Salé</a>
+                <a class="nav-link text-white" href="{{route('show', 2)}}">Salé</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="">Commandes</a>
