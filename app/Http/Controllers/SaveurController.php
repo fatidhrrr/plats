@@ -51,7 +51,9 @@ class SaveurController extends Controller
      */
     public function show($id)
     {
-        //
+        $saveur = Saveur::find($id);
+        $plats = $saveur->plats;
+        return view('sucre', compact('saveur', 'plats'));
     }
 
     /**

@@ -15,10 +15,13 @@
                 <a class="nav-link text-white" href="{{route('addSaveur')}}">Saveur</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="">Sucré</a>
+            <a class="nav-link text-white" href="{{route('show', 1)}}">Sucré</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="">Salé</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="">Commandes</a>
             </li>
         </ul>
     </div>

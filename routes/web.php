@@ -29,3 +29,4 @@ Route::get("/delete/{id}", "PlatController@destroy")->name("delete");
 
 Route::get('/addSaveur', "SaveurController@create")->name('addSaveur');
 Route::post("/saveSaveur", "SaveurController@store")->name("saveSaveur");
+Route::get("/show/{id}", "SaveurController@show")->name("show");
