@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Plat;
-use App\Saveur;
 
-class PlatController extends Controller
+class SaléController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class PlatController extends Controller
      */
     public function index()
     {
-        $plats = Plat::all();
-        return view('plat', compact('plats'));
+        //
     }
 
     /**
@@ -26,8 +23,7 @@ class PlatController extends Controller
      */
     public function create()
     {
-        $saveur = Saveur::all();
-        return view('add', compact('saveur'));
+        //
     }
 
     /**
@@ -38,11 +34,7 @@ class PlatController extends Controller
      */
     public function store(Request $request)
     {
-        $plats=new Plat();
-        $plats->plat=$request->input("plat");
-        $plats->saveur_id=$request->input("saveur");
-        $plats->save();
-        return redirect()->route("plat");
+        //
     }
 
     /**
@@ -76,11 +68,7 @@ class PlatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $plats=Plats::find($id);
-        $plats->plat=$request->input("plat");
-        $plats->saveur=$request->input("saveur");
-        $plats->save();         
-        return redirect()->route("plat");
+        //
     }
 
     /**
@@ -91,8 +79,6 @@ class PlatController extends Controller
      */
     public function destroy($id)
     {
-        $plats = Plat::find($id);
-        $plats->delete();
-        return redirect()->route('plat');
+        //
     }
 }

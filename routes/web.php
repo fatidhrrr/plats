@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('Plat', 'PlatController@index')->name('plat');
-Route::get('/show/{id}',"PlatController@show")->name("show");
 Route::get('/add', "PlatController@create")->name('add');
 Route::post("/saveLivre", "PlatController@store")->name("savePlat");
 Route::post('/update/{id}', "PlatController@update")->name("update");

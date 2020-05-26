@@ -9,7 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link text-white" href="{{route('plat')}}">Plats</a>
+                <a class="nav-link text-white" href="{{route('plat')}}">Plats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="">Sucré</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="">Salé</a>
             </li>
         </ul>
     </div>
