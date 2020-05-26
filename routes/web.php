@@ -17,8 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Plat
+
 Route::get('Plat', 'PlatController@index')->name('plat');
 Route::get('/add', "PlatController@create")->name('add');
 Route::post("/saveLivre", "PlatController@store")->name("savePlat");
 Route::post('/update/{id}', "PlatController@update")->name("update");
 Route::get("/delete/{id}", "PlatController@destroy")->name("delete");
+
+// Saveur 
+
+Route::get('/addSaveur', "SaveurController@create")->name('addSaveur');
+Route::post("/saveSaveur", "SaveurController@store")->name("saveSaveur");
