@@ -28,15 +28,21 @@
                         <td>{{$item->id}}</td>
                         <td>{{$item->plat}}</td>
                         <td>{{$item->saveur->saveur}}</td>
-                    <td>
-                        <a href='{{route('delete', $item->id)}}' class='btn btn-danger'>Delete</a>
-                    </td>
+                        <td>
+                            <form action="{{route('saveCommande', $item)}}" method="POST" class="contactForm ">
+                                @csrf
+                                <input type="number" name="portion">
+                                <button class="btn btn-primary" type="submit">Commander</button>
+                            </form>
+
+                            <a href='{{route('delete', $item->id)}}' class='btn btn-danger'>Delete</a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
             <div class="text-center ">
-            <a href="{{route('add')}}" class="btn btnModal btn-dark mx-auto mt-4 modalBtn">Ajouter</a>
+                <a href="{{route('add')}}" class="btn btnModal btn-dark mx-auto mt-4 modalBtn">Ajouter</a>
             </div>
         </div>
     </div>

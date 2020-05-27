@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('Plat', 'PlatController@index')->name('plat');
 Route::get('/add', "PlatController@create")->name('add');
-Route::post("/saveLivre", "PlatController@store")->name("savePlat");
+Route::post("/savePlat", "PlatController@store")->name("savePlat");
 Route::post('/update/{id}', "PlatController@update")->name("update");
 Route::get("/delete/{id}", "PlatController@destroy")->name("delete");
 
@@ -30,3 +30,9 @@ Route::get("/delete/{id}", "PlatController@destroy")->name("delete");
 Route::get('/addSaveur', "SaveurController@create")->name('addSaveur');
 Route::post("/saveSaveur", "SaveurController@store")->name("saveSaveur");
 Route::get("/show/{id}", "SaveurController@show")->name("show");
+
+// Commande 
+
+Route::get('/commande', 'CommandeController@index')->name('commande');
+Route::post("/saveCommande/{plat}", "CommandeController@store")->name("saveCommande");
+Route::get("/delete/{id}", "CommandeController@destroy")->name("delete");
